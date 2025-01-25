@@ -22,7 +22,7 @@ exports.signup = async (req, res) => {
       from: process.env.EMAIL_USER,
       to: user.email,
       subject: 'Email Verification',
-      text: `Click the link to verify your email: ${process.env.CLIENT_URL}/verify/${token}`,
+      text: `Click the link to verify your email: ${process.env.CLIENT_URL}/api/auth/verify/${token}`,
     };
 
     transporter.sendMail(mailOptions);
